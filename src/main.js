@@ -2,9 +2,9 @@
 module.exports = (function(){
     require('onsenui/css/onsenui.css');
     require('onsenui/css/onsen-css-components-blue-basic-theme.css');    
-    require('onsenui/js/onsenui');
 
     require('angular/angular');
+    window.ons = require('onsenui/js/onsenui');
     require('onsenui/js/angular-onsenui');
 
     var angular = window.angular;
