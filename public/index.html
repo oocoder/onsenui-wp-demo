@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+    
+    <title>Demo App</title>
+    <head>
+        <!-- ////////////// MOBILE META CONFIG ////////////////////////// -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <meta name="application-name" content="Pensi" />
+        <meta name="apple-mobile-web-app-title" content="Pensi">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="format-detection" content="telephone=no"/>
+        <link rel="apple-touch-icon-precomposed" href="">
+        <link rel="shortcut icon" href="" />
+        <!-- ////////////// END MOBILE META CONFIG ////////////////////////// -->
+        
+    	<script src='bundle.js'></script>
+	</head>
+    <body>
+        <ons-navigator ng-controller="TaskViewCtrl as tv">
+            <!-- ///// MAIN PAGE /////////////////////////////////////////////// -->
+            <ons-page>
+                <ons-toolbar var="app.toolbar">
+                    <div class="center">Demo App</div>
+                </ons-toolbar>
+                <ons-pull-hook ng-action="tv.refresh($done)">
+                    <ons-icon size="25px" spin="true" icon="fa-spinner"></ons-icon>
+                </ons-pull-hook>
+                <ons-list>
+                    <!-- ////// LIST ITEM /////////////////////////////////// -->
+                    <ons-list-item modifier="tappable" style="padding: 0px;"
+                        class="animate-repeat" ng-repeat="task in tv.tasks">
+                        
+                        <!-- ////// CAROUSEL /////////////////////////////////// -->
+                        <!--<ons-carousel ons-postchange="tv.handleSwipeGesture($event, $index);"
+                            swipeable initial-index="1" auto-scroll>
+                            <ons-carousel-item style="background-color: #24A61B;text-align: center;">
+                                <ons-icon icon="fa-check" size="30px" style="display: block;line-height: 100px;color: white;" />
+                            </ons-carousel-item>
+    
+                            <ons-carousel-item style="position: relative;" >
+                                <ons-row class="task-row" ng-click="tv.toggleDescShort($index);">
+                                    <ons-col>
+                                        <div class="task-h2">{{task.source}}</div>
+                                        <div class="task-h1">{{task.name}}</div>
+                                        <div class="task-h4" ng-class="{'short': tv.getIsDescShort($index)}">
+                                            {{task.desc}}
+                                        </div>
+                                        <div class="task-h3">{{task.info1}}<br>{{task.info2}}</div>
+                                    </ons-col>
+                                    <ons-col width="82px">
+                                        <img ng-src="{{'/assets/' + task.imageSrc}}" width="80pt" height="100pt">
+                                    </ons-col>
+                                </ons-row>
+                            </ons-carousel-item>
+    
+                            <ons-carousel-item style="background-color: #F28211;text-align: center;">
+                                <ons-icon icon="fa-clock-o" size="30px" style="display: block;line-height: 100px;color: white;" />
+                            </ons-carousel-item>
+                        </ons-carousel>-->
+                        <!-- ////// END CAROUSEL /////////////////////////////////// -->
+                    
+                    </ons-list-item>
+                </ons-list>
+            </ons-page>
+            <!-- //// END MAIN PAGE /////////////////////////////////////////////// -->
+            
+        </ons-navigator>
+    </body>
+</html>
