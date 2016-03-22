@@ -3,9 +3,8 @@ module.exports = (function(){
     require('onsenui/css/onsenui.css');
     require('onsenui/css/onsen-css-components-blue-basic-theme.css');    
 
-    require('angular/angular');
     window.ons = require('onsenui/js/onsenui');
-    require('onsenui/js/angular-onsenui');
+    require('angular/angular');
 
     var angular = window.angular;
 
@@ -25,8 +24,14 @@ module.exports = (function(){
                 if(idx) isDescShortMap[idx] = isDescShortMap[idx] !== true;
             }
         };
-    }]);
+    }])
+    .run(function(){
+        console.log('It worked!!!');
+    });
     
-    angular.bootstrap(document, ['demo-app']);
+    angular.element(document).ready(function() {
+        require('onsenui/js/angular-onsenui');
+        angular.bootstrap(document, ['demo-app']);
+    });    
 
 })();

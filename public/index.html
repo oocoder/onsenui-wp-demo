@@ -28,40 +28,6 @@
                     <ons-icon size="25px" spin="true" icon="fa-spinner"></ons-icon>
                 </ons-pull-hook>
                 <ons-list>
-                    <!-- ////// LIST ITEM /////////////////////////////////// -->
-                    <ons-list-item modifier="tappable" style="padding: 0px;"
-                        class="animate-repeat" ng-repeat="task in tv.tasks">
-                        
-                        <!-- ////// CAROUSEL /////////////////////////////////// -->
-                        <!--<ons-carousel ons-postchange="tv.handleSwipeGesture($event, $index);"
-                            swipeable initial-index="1" auto-scroll>
-                            <ons-carousel-item style="background-color: #24A61B;text-align: center;">
-                                <ons-icon icon="fa-check" size="30px" style="display: block;line-height: 100px;color: white;" />
-                            </ons-carousel-item>
-    
-                            <ons-carousel-item style="position: relative;" >
-                                <ons-row class="task-row" ng-click="tv.toggleDescShort($index);">
-                                    <ons-col>
-                                        <div class="task-h2">{{task.source}}</div>
-                                        <div class="task-h1">{{task.name}}</div>
-                                        <div class="task-h4" ng-class="{'short': tv.getIsDescShort($index)}">
-                                            {{task.desc}}
-                                        </div>
-                                        <div class="task-h3">{{task.info1}}<br>{{task.info2}}</div>
-                                    </ons-col>
-                                    <ons-col width="82px">
-                                        <img ng-src="{{'/assets/' + task.imageSrc}}" width="80pt" height="100pt">
-                                    </ons-col>
-                                </ons-row>
-                            </ons-carousel-item>
-    
-                            <ons-carousel-item style="background-color: #F28211;text-align: center;">
-                                <ons-icon icon="fa-clock-o" size="30px" style="display: block;line-height: 100px;color: white;" />
-                            </ons-carousel-item>
-                        </ons-carousel>-->
-                        <!-- ////// END CAROUSEL /////////////////////////////////// -->
-                    
-                    </ons-list-item>
                 </ons-list>
             </ons-page>
             <!-- //// END MAIN PAGE /////////////////////////////////////////////// -->
